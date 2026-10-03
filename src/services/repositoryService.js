@@ -14,3 +14,10 @@ export const searchRepositories = async(search,page,per_page=10) => {
     return reponse.data;
 
 }
+
+
+
+export const getRepository = async(owner,repo) => {
+    const response = await api.get(`repos/${owner}/${repo}`);
+    return response.data;
+}
